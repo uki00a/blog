@@ -7,11 +7,5 @@ const Layout = ({ title, content, publishedAt, updatedAt }) => (React.createElem
         React.createElement("link", { rel: "stylesheet", href: "assets/index.css" })),
     React.createElement("body", null,
         React.createElement(Header, null),
-        React.createElement("main", null, content),
-        React.createElement("div", null,
-            "\u4F5C\u6210\u65E5: ",
-            publishedAt ? publishedAt.toString() : ""),
-        React.createElement("div", null,
-            "\u66F4\u65B0\u65E5: ",
-            updatedAt ? updatedAt.toString() : ""))));
+        React.createElement("main", null, content))));
 export default Layout;
