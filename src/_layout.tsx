@@ -13,8 +13,6 @@ const Layout: PagicLayout = ({ title, content, publishedAt, updatedAt }) => (
       <main>
       {content}
       </main>
-      <div>作成日: {publishedAt ? publishedAt.toString() : ""}</div>
-      <div>更新日: {updatedAt ? updatedAt.toString() : ""}</div>
     </body>
   </html>
 );
