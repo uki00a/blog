@@ -11,7 +11,7 @@ tags:
 
 ## 使っている技術
 
-このブログは[pagic](https://github.com/xcatliu/pagic)というDenoで実装されたスタティックサイトジェネレータを使って作成しています。
+このブログは[pagic](https://github.com/xcatliu/pagic)を使って作成しています。
 
 この記事を書いた時点でのバージョンは次の通りです。
 
