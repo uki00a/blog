@@ -14,7 +14,7 @@ const Layout = ({ outputPath, title, content, }) => {
         React.createElement("body", null,
             React.createElement("header", null,
                 React.createElement("div", null,
-                    React.createElement("a", { href: linkToTopPage }, "\u30BF\u30A4\u30C8\u30EB"))),
+                    React.createElement("a", { href: linkToTopPage }, "uki00a.github.io"))),
             React.createElement("main", null, content))));
 };
 export default Layout;
