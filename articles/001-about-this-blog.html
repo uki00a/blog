@@ -1,0 +1,46 @@
+<!doctype html><html data-reactroot=""><head><title>このブログについて</title><meta charSet="utf-8"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css"/></head><body><header><div><a href="../index.html">タイトル</a></div></header><main><article><h1>このブログについて</h1>
+<h2 id="%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E6%8A%80%E8%A1%93">使っている技術<a class="anchor" href="#%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E6%8A%80%E8%A1%93">§</a></h2>
+<p>このブログは<a href="https://github.com/xcatliu/pagic">pagic</a>というDenoで実装されたスタティックサイトジェネレータを使って作成しています。</p>
+<p>この記事を書いた時点でのバージョンは次の通りです。</p>
+<ul>
+<li>deno@v1.3.1</li>
+<li>pagic@v0.8.6</li>
+</ul>
+<h2 id="pagic%E3%81%A8%E3%81%AF%3F">pagicとは?<a class="anchor" href="#pagic%E3%81%A8%E3%81%AF%3F">§</a></h2>
+<ul>
+<li>Denoで実装されたスタティックサイトジェネレータ</li>
+<li>記事をReactコンポーネントまたはmarkdown形式で記述できる</li>
+<li>プラグインシステムにより拡張することが可能</li>
+</ul>
+<h2 id="%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4">デプロイ<a class="anchor" href="#%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4">§</a></h2>
+<p>GitHub Actionsを使って、ビルド及びデプロイを自動化しています。</p>
+<p><code>.github/workflows</code>ディレクトリ内に以下のようなyamlファイルを用意します。</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> build
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> master
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> <a class="token email-link" href="mailto:actions/checkout@master">actions/checkout@master</a>
+    <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> denolib/setup<span class="token punctuation">-</span><a class="token email-link" href="mailto:deno@master">deno@master</a>
+      <span class="token key atrule">with</span><span class="token punctuation">:</span>
+        <span class="token key atrule">deno-version</span><span class="token punctuation">:</span> 1.3.1
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build
+      <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+        deno run --unstable --allow-read --allow-write --allow-net https://deno.land/x/pagic@v0.8.6/mod.ts build</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
+      <span class="token key atrule">with</span><span class="token punctuation">:</span>
+        <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> ./dist
+</code></pre>
+<p>これにより、masterブランチへのpush時に、以下の処理が実行されます。</p>
+<ol>
+<li><code>pagic build</code>による静的サイトの生成</li>
+<li><a href="https://github.com/peaceiris/actions-gh-pages">peaceiris/actions-gh-pages</a>によるGitHub Pagesへのデプロイ</li>
+</ol>
+<h2 id="%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9">このサイトのソース<a class="anchor" href="#%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9">§</a></h2>
+<p>https://github.com/uki00a/blog です。</p></article></main></body></html>
