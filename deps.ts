@@ -1,4 +1,4 @@
 export {
   fromFileUrl,
   join as joinPaths
-} from "https://deno.land/std@v0.63.0/path/mod.ts";
+} from "https://deno.land/std@0.66.0/path/mod.ts";
