@@ -1,3 +1,7 @@
-# Hello Pagic!
+# uki00a.github.io
 
-Hello world!
+- [このブログについて](articles/001-about-this-blog.html)
+
+## リンク
+
+- [ソースコード](https://github.com/uki00a/blog)
