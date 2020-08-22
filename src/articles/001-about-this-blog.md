@@ -62,4 +62,4 @@ jobs:
 
 ## このサイトのソース
 
-https://github.com/uki00a/blog です。
+[https://github.com/uki00a/blog](https://github.com/uki00a/blog)に置いています
