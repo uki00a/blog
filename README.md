@@ -1,3 +1,5 @@
-# blog
+# [uki00a.github.io](https://uki00a.github.io/blog)
 
-このブログは[pagic](https://github.com/xcatliu/pagic)を使用して生成されています。
+## このブログについて
+
+[こちら](https://uki00a.github.io/blog/articles/001-about-this-blog.html)を参照ください
