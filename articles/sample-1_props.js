@@ -1,9 +1,9 @@
 import projectConfig from '/pagic.config.js';
 export default {
     config: { "root": "/", ...projectConfig },
-    'pagePath': "sample-1.md",
+    'pagePath': "articles/sample-1.md",
     'layoutPath': "_layout.tsx",
-    'outputPath': "sample-1.html",
+    'outputPath': "articles/sample-1.html",
     'title': "Sample 1",
     'content': React.createElement("article", { dangerouslySetInnerHTML: {
             __html: '<h1>Sample 1</h1>\n<p>テスト</p>'
