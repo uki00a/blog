@@ -1,12 +1,12 @@
 import projectConfig from '/pagic.config.js';
 export default {
     config: { "root": "/", ...projectConfig },
-    'pagePath': "README.md",
-    'layoutPath': "_layout.tsx",
-    'outputPath': "index.html",
-    'title': "blog",
+    'pagePath': "src/index.md",
+    'layoutPath': "src/_layout.tsx",
+    'outputPath': "src/index.html",
+    'title': "Hello Pagic!",
     'content': React.createElement("article", { dangerouslySetInnerHTML: {
-            __html: '<h1>blog</h1>\n<p>このブログは<a href="https://github.com/xcatliu/pagic">pagic</a>を使用して生成されています。</p>'
+            __html: '<h1>Hello Pagic!</h1>\n<p>Hello world!</p>'
         } }),
     'script': React.createElement(React.Fragment, null,
         React.createElement("script", { crossOrigin: "anonymous", src: "https://unpkg.com/react@16.13.1/umd/react.production.min.js" }),
