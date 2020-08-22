@@ -22,7 +22,7 @@ const Layout: PagicLayout = ({
       <body>
         <header>
           <div>
-            <a href={linkToTopPage}>タイトル</a>
+            <a href={linkToTopPage}>uki00a.github.io</a>
           </div>
         </header>
         <main>
