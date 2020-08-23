@@ -15,8 +15,8 @@ export default {
     'toc': React.createElement("aside", { dangerouslySetInnerHTML: {
             __html: '<nav class="toc"><ol><li><a href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</a></li><li><a href="#rhysd%2Fdotfiles%E3%81%A8%E3%81%AF%3F">rhysd/dotfilesとは?</a></li><li><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</a></li><li><a href="#dotfiles%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AE%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%B3">dotfilesリポジトリのクローン</a></li><li><a href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E4%BD%BF%E3%81%84%E6%96%B9">基本的な使い方</a></li><li><a href="#%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%99%E3%82%8B">カスタムマッピングを定義する</a></li><li><a href="#%E3%82%B7%E3%83%B3%E3%83%9C%E3%83%AA%E3%83%83%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E5%89%8A%E9%99%A4">シンボリックリンクの削除</a></li><li><a href="#%E3%81%8A%E3%82%8F%E3%82%8A%E3%81%AB">おわりに</a></li></ol></nav>'
         } }),
-    'publishedAt': "2020-08-22T00:00:00.000Z",
-    'updatedAt': "2020-08-22T00:00:00.000Z",
+    'publishedAt': "2020-08-23T00:00:00.000Z",
+    'updatedAt': "2020-08-23T00:00:00.000Z",
     'tags': [
         "vim",
         "vscode"
