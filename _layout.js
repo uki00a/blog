@@ -8,11 +8,12 @@ const Layout = ({ outputPath, title, content, }) => {
     const favicon = `${URL}/assets/favicon.ico`;
     const ogImage = `${URL}/assets/${SITE_IMAGE}`;
     const ogType = outputPath.endsWith(TOP_PAGE) ? "website" : "article";
-    const ogDescription = DEFAULT_DESCRIPTION; // TODO ページごとにdescriptionを変える
+    const ogDescription = title; // TODO ページの要約を設定したい
     return (React.createElement("html", null,
         React.createElement("head", null,
             React.createElement("title", null, title),
             React.createElement("meta", { charSet: "utf-8" }),
+            React.createElement("meta", { name: "description", content: ogDescription }),
             React.createElement("meta", { property: "og:title", content: title }),
             React.createElement("meta", { property: "og:description", content: ogDescription }),
             React.createElement("meta", { property: "og:type", content: ogType }),
