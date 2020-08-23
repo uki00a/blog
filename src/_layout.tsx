@@ -14,13 +14,14 @@ const Layout: PagicLayout = ({
   const favicon = `${URL}/assets/favicon.ico`;
   const ogImage = `${URL}/assets/${SITE_IMAGE}`;
   const ogType = outputPath.endsWith(TOP_PAGE) ? "website" : "article";
-  const ogDescription = DEFAULT_DESCRIPTION; // TODO ページごとにdescriptionを変える
+  const ogDescription = title; // TODO ページの要約を設定したい
 
   return (
     <html>
       <head>
         <title>{title}</title>
         <meta charSet="utf-8" />
+        <meta name="description" content={ogDescription} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={ogDescription} />
         <meta property="og:type" content={ogType} />
