@@ -1,6 +1,6 @@
 import { React, PagicLayout } from "./_deps.tsx";
 
-const URL = "https://https://uki00a.github.io/blog"; // FIXME
+const URL = "https://https://uki00a.github.io/blog"; // TODO ローカル環境では`http://localhost:<port>`を設定できるようにする
 const TOP_PAGE = "index.html";
 const DEFAULT_DESCRIPTION = "uki00a.github.io";
 const SITE_IMAGE = "avatar.png";
@@ -21,7 +21,7 @@ const Layout: PagicLayout = ({
       <head>
         <title>{title}</title>
         <meta charSet="utf-8" />
-        <meta property="og:title" content={title}>
+        <meta property="og:title" content={title} />
         <meta property="og:description" content={ogDescription} />
         <meta property="og:type" content={ogType} />
         <meta property="og:image" content={ogImage} />
