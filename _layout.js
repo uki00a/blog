@@ -13,6 +13,7 @@ const Layout = ({ outputPath, title, content, }) => {
         React.createElement("head", null,
             React.createElement("title", null, title),
             React.createElement("meta", { charSet: "utf-8" }),
+            React.createElement("meta", { name: "viewport", content: "width=device-width,initial-scale=1.0" }),
             React.createElement("meta", { name: "description", content: ogDescription }),
             React.createElement("meta", { property: "og:title", content: title }),
             React.createElement("meta", { property: "og:description", content: ogDescription }),
