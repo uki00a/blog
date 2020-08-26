@@ -1,2 +1,1 @@
-export { PagicLayout } from "https://deno.land/x/pagic@v0.8.6/mod.ts";
-export { React };
+export { PagicLayout, React } from "https://deno.land/x/pagic@v0.8.7/mod.ts";

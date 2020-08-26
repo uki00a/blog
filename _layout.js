@@ -1,4 +1,3 @@
-import { React } from "./_deps.js";
 const URL = "https://uki00a.github.io/blog"; // TODO ローカル環境では`http://localhost:<port>`を設定できるようにする
 const TOP_PAGE = "index.html";
 const DEFAULT_DESCRIPTION = "uki00a.github.io";
