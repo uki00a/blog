@@ -1,42 +1,35 @@
-import { React, PagicLayout } from "./_deps.tsx";
-
-const URL = "https://uki00a.github.io/blog"; // TODO ローカル環境では`http://localhost:<port>`を設定できるようにする
-const TOP_PAGE = "index.html";
-const DEFAULT_DESCRIPTION = "uki00a.github.io";
-const SITE_IMAGE = "avatar.png";
+import { React, PagicLayout } from "pagic";
 
 const Layout: PagicLayout = ({
   outputPath,
   title,
   content,
+  config,
+  head,
 }) => {
-  const linkToTopPage = `${URL}/${TOP_PAGE}`;
-  const favicon = `${URL}/assets/favicon.ico`;
-  const ogImage = `${URL}/assets/${SITE_IMAGE}`;
-  const ogType = outputPath.endsWith(TOP_PAGE) ? "website" : "article";
-  const ogDescription = title; // TODO ページの要約を設定したい
+  const isIndex = outputPath === "index.html"
+  const pageTitle = isIndex
+    ? "TOP | " + config.title
+    : title + " | " + config.title;
 
   return (
     <html>
       <head>
-        <title>{title}</title>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <meta name="description" content={ogDescription} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={ogDescription} />
-        <meta property="og:type" content={ogType} />
-        <meta property="og:image" content={ogImage} />
+        <title>{pageTitle}</title>
+        {config.description && <meta name="description" content={config.description} />}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content={pageTitle} />
+        {config.description && <meta property="og:description" content={config.description} />}
+        {<meta property="og:type" content={isIndex ? 'website' : 'article'} />}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@uki00a" />
-        <meta name="twitter:creator" content="@uki00a" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css"></link>
-        <link rel="icon" href={favicon}></link>
+        {config.blog?.social?.twitter && <meta name="twitter:site" content={`@${config.blog.social.twitter}`} />}
+        {head}
       </head>
       <body>
         <header>
           <div>
-            <a href={linkToTopPage}>uki00a.github.io</a>
+            <a href={`${config.root}index.html`}>uki00a.github.io</a>
           </div>
         </header>
         <main>
