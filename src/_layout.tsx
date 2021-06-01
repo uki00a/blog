@@ -30,7 +30,7 @@ const Layout: PagicLayout = ({
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@uki00a" />
         <meta name="twitter:creator" content="@uki00a" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css"></link>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css"></link>
         <link rel="icon" href={favicon}></link>
       </head>
       <body>
