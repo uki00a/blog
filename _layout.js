@@ -21,7 +21,7 @@ const Layout = ({ outputPath, title, content, }) => {
             React.createElement("meta", { name: "twitter:card", content: "summary" }),
             React.createElement("meta", { name: "twitter:site", content: "@uki00a" }),
             React.createElement("meta", { name: "twitter:creator", content: "@uki00a" }),
-            React.createElement("link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css" }),
+            React.createElement("link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css" }),
             React.createElement("link", { rel: "icon", href: favicon })),
         React.createElement("body", null,
             React.createElement("header", null,
