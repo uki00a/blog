@@ -57,7 +57,7 @@ footer {
 }
 /* #endregion */
 
-/* #region Github Corners */
+/* #region GitHub Corners */
 .github-corner:hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out;
 }
@@ -81,6 +81,18 @@ footer {
   }
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
+  }
+}
+/* #endregion */
+
+/* #region Print */
+@media print {
+  .github-corner,
+  footer {
+    display: none;
+  }
+  article a[href]::after {
+    content: ' (' attr(href) ') ';
   }
 }
 /* #endregion */

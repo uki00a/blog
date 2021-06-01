@@ -1,32 +1,25 @@
-const URL = "https://uki00a.github.io/blog"; // TODO ローカル環境では`http://localhost:<port>`を設定できるようにする
-const TOP_PAGE = "index.html";
-const DEFAULT_DESCRIPTION = "uki00a.github.io";
-const SITE_IMAGE = "avatar.png";
-const Layout = ({ outputPath, title, content, }) => {
-    const linkToTopPage = `${URL}/${TOP_PAGE}`;
-    const favicon = `${URL}/assets/favicon.ico`;
-    const ogImage = `${URL}/assets/${SITE_IMAGE}`;
-    const ogType = outputPath.endsWith(TOP_PAGE) ? "website" : "article";
-    const ogDescription = title; // TODO ページの要約を設定したい
+const Layout = ({ outputPath, title, content, config, head, }) => {
+    var _a, _b;
+    const isIndex = outputPath === "index.html";
+    const pageTitle = isIndex
+        ? "TOP | " + config.title
+        : title + " | " + config.title;
     return (React.createElement("html", null,
         React.createElement("head", null,
-            React.createElement("title", null, title),
             React.createElement("meta", { charSet: "utf-8" }),
-            React.createElement("meta", { name: "viewport", content: "width=device-width,initial-scale=1.0" }),
-            React.createElement("meta", { name: "description", content: ogDescription }),
-            React.createElement("meta", { property: "og:title", content: title }),
-            React.createElement("meta", { property: "og:description", content: ogDescription }),
-            React.createElement("meta", { property: "og:type", content: ogType }),
-            React.createElement("meta", { property: "og:image", content: ogImage }),
+            React.createElement("title", null, pageTitle),
+            config.description && React.createElement("meta", { name: "description", content: config.description }),
+            React.createElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }),
+            React.createElement("meta", { property: "og:title", content: pageTitle }),
+            config.description && React.createElement("meta", { property: "og:description", content: config.description }),
+            React.createElement("meta", { property: "og:type", content: isIndex ? 'website' : 'article' }),
             React.createElement("meta", { name: "twitter:card", content: "summary" }),
-            React.createElement("meta", { name: "twitter:site", content: "@uki00a" }),
-            React.createElement("meta", { name: "twitter:creator", content: "@uki00a" }),
-            React.createElement("link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css" }),
-            React.createElement("link", { rel: "icon", href: favicon })),
+            ((_b = (_a = config.blog) === null || _a === void 0 ? void 0 : _a.social) === null || _b === void 0 ? void 0 : _b.twitter) && React.createElement("meta", { name: "twitter:site", content: `@${config.blog.social.twitter}` }),
+            head),
         React.createElement("body", null,
             React.createElement("header", null,
                 React.createElement("div", null,
-                    React.createElement("a", { href: linkToTopPage }, "uki00a.github.io"))),
+                    React.createElement("a", { href: `${config.root}index.html` }, "uki00a.github.io"))),
             React.createElement("main", null, content))));
 };
 export default Layout;
