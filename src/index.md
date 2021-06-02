@@ -1,5 +1,6 @@
 ## Posts
 
+- [週刊DenoのサイトをPagicに移行した話](articles/003-migrate-deno-weekly-to-pagic.html)
 - [rhysd/dotfilesを使ってdotfilesリポジトリの管理を楽にする](articles/002-how-to-use-rhysd-dotfiles.html)
 - [このブログについて](articles/001-about-this-blog.html)
 
