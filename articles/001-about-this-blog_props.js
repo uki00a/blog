@@ -32,11 +32,11 @@ export default {
                 React.createElement("a", { href: "#%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4" }, "\u30C7\u30D7\u30ED\u30A4")),
             React.createElement("li", null,
                 React.createElement("a", { href: "#%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9" }, "\u3053\u306E\u30B5\u30A4\u30C8\u306E\u30BD\u30FC\u30B9")))),
-    'author': "Yuki Tanaka",
+    'author': "uki00a",
     'contributors': [
-        "Yuki Tanaka"
+        "uki00a"
     ],
-    'date': "2021-06-01T21:05:51.000Z",
+    'date': "2021-06-02T15:34:43.000Z",
     'updated': null,
     'excerpt': "使っている技術 このブログはpagicを使って作成しています。 この記事を書いた時点でのバージョンは次の通りです。 - deno@v1.3.1 - pagic@v0.8.6 pagicとは? - Denoで実装されたスタティックサイトジェネレータ - 記事をReact...",
     'cover': undefined,

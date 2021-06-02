@@ -38,11 +38,11 @@ export default {
                 React.createElement("a", { href: "#%E3%82%B7%E3%83%B3%E3%83%9C%E3%83%AA%E3%83%83%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E5%89%8A%E9%99%A4" }, "\u30B7\u30F3\u30DC\u30EA\u30C3\u30AF\u30EA\u30F3\u30AF\u306E\u524A\u9664")),
             React.createElement("li", null,
                 React.createElement("a", { href: "#%E3%81%8A%E3%82%8F%E3%82%8A%E3%81%AB" }, "\u304A\u308F\u308A\u306B")))),
-    'author': "Yuki Tanaka",
+    'author': "uki00a",
     'contributors': [
-        "Yuki Tanaka"
+        "uki00a"
     ],
-    'date': "2021-06-01T21:05:51.000Z",
+    'date': "2021-06-02T15:34:43.000Z",
     'updated': null,
     'excerpt': "はじめに dotfilesリポジトリの管理をシェルスクリプトからrhysd/dotfilesに移行しました。 この記事ではrhysd/dotfilesを使ってdotfilesリポジトリを管理するについて記載します。 rhysd/dotfilesとは? dotfilesリポジトリの管...",
     'cover': undefined,
