@@ -1,6 +1,7 @@
 ---
 publishedAt: 2020-08-22
 updatedAt: 2020-08-22
+title: このブログについて
 tags:
   - pagic
   - deno
