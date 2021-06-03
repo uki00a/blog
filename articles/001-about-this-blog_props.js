@@ -36,12 +36,11 @@ export default {
     'contributors': [
         "uki00a"
     ],
-    'date': "2021-06-02T15:34:43.000Z",
+    'date': "2021-06-03T21:01:59.000Z",
     'updated': null,
     'excerpt': "使っている技術 このブログはpagicを使って作成しています。 この記事を書いた時点でのバージョンは次の通りです。 - deno@v1.3.1 - pagic@v0.8.6 pagicとは? - Denoで実装されたスタティックサイトジェネレータ - 記事をReact...",
     'cover': undefined,
-    'publishedAt': "2020-08-22T00:00:00.000Z",
-    'updatedAt': "2020-08-22T00:00:00.000Z",
+    'publishDate': "2020-08-22T00:00:00.000Z",
     'tags': [
         "pagic",
         "deno",

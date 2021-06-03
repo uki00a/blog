@@ -63,7 +63,7 @@ export default {
     'contributors': [
         "uki00a"
     ],
-    'date': "2021-06-02T15:34:43.000Z",
+    'date': "2021-06-03T21:01:59.000Z",
     'updated': null,
     'excerpt': "はじめに 個人で週刊Denoというサイトを運営しています。 このサイトで使用しているスタティックサイトジェネレータをPagicに移行したため、その中で得たノウハウなどについてまとめてみます。 Pagicとは? PagicはDenoとReactを...",
     'cover': undefined,

@@ -42,12 +42,11 @@ export default {
     'contributors': [
         "uki00a"
     ],
-    'date': "2021-06-02T15:34:43.000Z",
+    'date': "2021-06-03T21:01:59.000Z",
     'updated': null,
     'excerpt': "はじめに dotfilesリポジトリの管理をシェルスクリプトからrhysd/dotfilesに移行しました。 この記事ではrhysd/dotfilesを使ってdotfilesリポジトリを管理するについて記載します。 rhysd/dotfilesとは? dotfilesリポジトリの管...",
     'cover': undefined,
-    'publishedAt': "2020-08-23T00:00:00.000Z",
-    'updatedAt': "2020-08-23T00:00:00.000Z",
+    'publishDate': "2020-08-23T00:00:00.000Z",
     'tags': [
         "vim",
         "vscode"
