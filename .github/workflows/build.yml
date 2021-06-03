@@ -16,6 +16,8 @@ jobs:
       with:
         deno-version: 1.10.2
     - name: Build
+      env:
+        TRACKING_ID: G-R8RKYMTR71
       run: |
         deno run --unstable --allow-read --allow-write --allow-net --allow-run --allow-env --import-map ./import_map.json ./build.ts
     - name: Deploy

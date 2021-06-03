@@ -7,10 +7,7 @@ export default {
   root,
   title: "uki00a.github.io",
   description: "uki00a.github.io",
-  /*
-  theme: "blog",
-  plugins: ["blog"],
-  */
+  plugins: ["ga"],
   head: (
     <>
       <link
@@ -34,6 +31,9 @@ export default {
       email: "uki00a@gmail.com",
       twitter: "uki00a",
     },
+  },
+  ga: typeof Deno === "undefined" ? undefined : {
+    id: Deno.env.get("TRACKING_ID"),
   },
   tools: {
     editOnGitHub: true,
