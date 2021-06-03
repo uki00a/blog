@@ -1,6 +1,5 @@
 ---
-publishedAt: 2020-08-23
-updatedAt: 2020-08-23
+publishDate: 2020-08-23
 title: rhysd/dotfilesを使ってdotfilesリポジトリの管理を楽にする
 tags:
   - vim
