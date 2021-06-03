@@ -1,5 +1,5 @@
 ---
-publishDate: 2021-06-02
+publishDate: 2021-06-04
 title: deno_std/testing/benchをNode.jsから使用する
 tags:
   - deno
