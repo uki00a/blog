@@ -93,6 +93,6 @@ benchmark result: DONE. 1 measured; 0 filtered
 
 ## おわりに
 
-この記事では、Node.jsから[testing/benchモジュールの使用方法](https://github.com/denoland/deno_std/tree/main/testing)を解説しました。
+この記事では、Node.jsから[testing/benchモジュール](https://github.com/denoland/deno_std/tree/main/testing)を使用する方法について解説しました。
 
 Denoに向けて書かれた他のモジュールについても、この記事で解説したものと同様の方法によってNode.jsからも使用できる可能性がありますので、参考になれば幸いです。
