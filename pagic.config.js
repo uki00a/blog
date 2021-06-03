@@ -5,10 +5,7 @@ export default {
     root,
     title: "uki00a.github.io",
     description: "uki00a.github.io",
-    /*
-    theme: "blog",
-    plugins: ["blog"],
-    */
+    plugins: ["ga"],
     head: (React.createElement(React.Fragment, null,
         React.createElement("link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css" }),
         React.createElement("link", { rel: "icon", href: "https://raw.githubusercontent.com/uki00a/blog/master/src/assets/favicon.ico" }),
@@ -20,6 +17,9 @@ export default {
             email: "uki00a@gmail.com",
             twitter: "uki00a",
         },
+    },
+    ga: typeof Deno === "undefined" ? undefined : {
+        id: Deno.env.get("TRACKING_ID"),
     },
     tools: {
         editOnGitHub: true,
