@@ -25,7 +25,7 @@ jobs:
     - name: Post build # TODO: Workaround for the problem of not being able to fetch files in the _astro directory
       run: |
         mkdir dist/blog
-        mv dist/* dist/blog
+        mv dist/*.css dist/blog
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       if: ${{ github.event_name == 'push' }}
