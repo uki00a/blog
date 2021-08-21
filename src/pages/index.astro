@@ -1,8 +1,9 @@
 ---
 import ArticleListLayout from '../layouts/ArticleList.astro';
 
-let allArticles = Astro.fetchContent('./articles/*.md');
-allArticles = allArticles.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+const allArticles = Astro.fetchContent('./articles/*.md').sort((a, b) => {
+  return new Date(b.date) - new Date(a.date);
+});
 ---
 <ArticleListLayout
   title="TOP"
