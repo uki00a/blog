@@ -23,7 +23,6 @@ export function getStaticPaths() {
 
 const { tag } = Astro.request.params;
 const { articles } = Astro.props;
-console.log(articles.map(x => x.title));
 ---
 
 <ArticleListLayout
