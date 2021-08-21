@@ -1,11 +1,12 @@
 ---
-publishDate: 2021-06-04
+date: 2021-06-04
 title: deno_std/testing/benchをNode.jsから使用する
 tags:
   - deno
   - Node.js
   - TypeScript
   - JavaScript
+layout: ../../layouts/Article.astro
 ---
 
 # deno_std/testing/benchをNode.jsから使用する

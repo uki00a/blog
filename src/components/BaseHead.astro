@@ -1,0 +1,47 @@
+---
+import Gtag from './Gtag.jsx';
+
+export interface Props {
+  title: string;
+  description: string;
+  trackingID?: string;
+}
+const { title, description, trackingID } = Astro.props;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/avatar.png" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/avatar.png" />
+<meta name="twitter:site" content="@uki00a" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap">
+
+<!-- Additional tags -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css"
+/>
+<link
+  rel="icon"
+  href="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/favicon.ico"
+/>
+
+{trackingID ? <Gtag id={trackingID} /> : null}

@@ -1,0 +1,13 @@
+{
+  "name": "@example/blog",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "astro dev",
+    "build": "astro build"
+  },
+  "devDependencies": {
+    "@astrojs/renderer-preact": "^0.2.1",
+    "astro": "^0.19.1"
+  }
+}

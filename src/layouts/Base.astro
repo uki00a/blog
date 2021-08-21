@@ -1,0 +1,23 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+
+const {title, description} = Astro.props;
+const maybeTrackingID = process.env.TRACKING_ID;
+---
+<html lang="ja">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      trackingID={maybeTrackingID}
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">uki00a.github.io</a>
+      </div>
+    </header>
+    <slot />
+  </body>
+</html>

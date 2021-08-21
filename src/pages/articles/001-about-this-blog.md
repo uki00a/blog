@@ -1,10 +1,11 @@
 ---
-publishDate: 2020-08-22
+date: 2020-08-22
 title: このブログについて
 tags:
   - pagic
   - deno
   - GitHubActions
+layout: ../../layouts/Article.astro
 ---
 
 # このブログについて 

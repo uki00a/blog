@@ -1,9 +1,10 @@
 ---
-publishDate: 2021-06-02
+date: 2021-06-02
 title: 週刊DenoのサイトをPagicに移行した話
 tags:
   - deno
   - pagic
+layout: ../../layouts/Article.astro
 ---
 
 # 週刊DenoのサイトをPagicに移行した話

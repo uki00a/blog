@@ -1,9 +1,10 @@
 ---
-publishDate: 2020-08-23
+date: 2020-08-23
 title: rhysd/dotfilesを使ってdotfilesリポジトリの管理を楽にする
 tags:
   - vim
   - vscode
+layout: ../../layouts/Article.astro
 ---
 
 # rhysd/dotfilesを使ってdotfilesリポジトリの管理を楽にする
