@@ -27,6 +27,8 @@
 </code></pre><p>これにより、masterブランチへのpush時に、以下の処理が実行されます。</p><ol><li><code>pagic build</code>による静的サイトの生成</li><li><a href="https://github.com/peaceiris/actions-gh-pages">peaceiris/actions-gh-pages</a>によるGitHub Pagesへのデプロイ</li></ol><h2 id="このサイトのソース">このサイトのソース</h2><p><a href="https://github.com/uki00a/blog">https://github.com/uki00a/blog</a>に置いています</p></div></article></main><script>
     document.querySelectorAll('link[href^="/_astro"]').forEach(function(el) {
       // TODO: Unable to fetch CSS files on github pages
-      el.href = "/blog" + el.href;
+      const url = new URL(el.href);
+      url.pathname = "/blog" + url.pathname;
+      el.href = url.href;
     });
     </script></body></html>
