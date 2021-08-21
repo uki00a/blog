@@ -4,7 +4,7 @@ export default {
   // dist: './dist',       // When running `astro build`, path to final static output
   // public: './public',   // A folder of static files Astro will copy to the root. Useful for favicons, images, and other files that don’t need processing.
   buildOptions: {
-    site: 'https://uki00a.github.io/blog/',           // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+    site: process.env.ASTRO_SITE ?? 'http://localhost:3000/',           // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
     sitemap: true, // Generate sitemap (set to "false" to disable)
   },
   devOptions: {
