@@ -24,4 +24,9 @@
       <span class="token key atrule">with</span><span class="token punctuation">:</span>
         <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
         <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> ./dist
-</code></pre><p>これにより、masterブランチへのpush時に、以下の処理が実行されます。</p><ol><li><code>pagic build</code>による静的サイトの生成</li><li><a href="https://github.com/peaceiris/actions-gh-pages">peaceiris/actions-gh-pages</a>によるGitHub Pagesへのデプロイ</li></ol><h2 id="このサイトのソース">このサイトのソース</h2><p><a href="https://github.com/uki00a/blog">https://github.com/uki00a/blog</a>に置いています</p></div></article></main></body></html>
+</code></pre><p>これにより、masterブランチへのpush時に、以下の処理が実行されます。</p><ol><li><code>pagic build</code>による静的サイトの生成</li><li><a href="https://github.com/peaceiris/actions-gh-pages">peaceiris/actions-gh-pages</a>によるGitHub Pagesへのデプロイ</li></ol><h2 id="このサイトのソース">このサイトのソース</h2><p><a href="https://github.com/uki00a/blog">https://github.com/uki00a/blog</a>に置いています</p></div></article></main><script>
+    document.querySelectorAll('link[href^="/_astro"]').forEach(function(el) {
+      // TODO: Unable to fetch CSS files on github pages
+      el.href = "/blog" + el.href;
+    });
+    </script></body></html>
