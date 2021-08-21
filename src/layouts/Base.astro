@@ -1,0 +1,18 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+
+const {title, description} = Astro.props;
+---
+<html lang="ja">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">uki00a.github.io</a>
+      </div>
+    </header>
+    <slot />
+  </body>
+</html>

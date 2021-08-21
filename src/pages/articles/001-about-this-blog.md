@@ -5,6 +5,7 @@ tags:
   - pagic
   - deno
   - GitHubActions
+layout: ../../layouts/Article.astro
 ---
 
 # このブログについて 

@@ -4,6 +4,7 @@ title: rhysd/dotfilesを使ってdotfilesリポジトリの管理を楽にする
 tags:
   - vim
   - vscode
+layout: ../../layouts/Article.astro
 ---
 
 # rhysd/dotfilesを使ってdotfilesリポジトリの管理を楽にする

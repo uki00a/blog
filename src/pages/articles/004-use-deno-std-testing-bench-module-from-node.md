@@ -6,6 +6,7 @@ tags:
   - Node.js
   - TypeScript
   - JavaScript
+layout: ../../layouts/Article.astro
 ---
 
 # deno_std/testing/benchをNode.jsから使用する
