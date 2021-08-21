@@ -1,9 +1,12 @@
 ---
+import Gtag from './Gtag.jsx';
+
 export interface Props {
   title: string;
   description: string;
+  trackingID?: string;
 }
-const { title, description } = Astro.props;
+const { title, description, trackingID } = Astro.props;
 ---
 
 <meta charset="utf-8" />
@@ -40,3 +43,5 @@ const { title, description } = Astro.props;
   rel="icon"
   href="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/favicon.ico"
 />
+
+{trackingID ? <Gtag id={trackingID} /> : null}
