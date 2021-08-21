@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>このブログについて</title><meta name="title" content="このブログについて"><meta name="description"><meta property="og:type" content="website"><meta property="og:title" content="このブログについて"><meta property="og:description"><meta property="og:image" content="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/avatar.png"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:title" content="このブログについて"><meta property="twitter:description"><meta property="twitter:image" content="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/avatar.png"><meta name="twitter:site" content="@uki00a"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&amp;family=IBM+Plex+Sans:wght@400;700&amp;display=swap"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css"><link rel="icon" href="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/favicon.ico"><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-R8RKYMTR71"></script><script>window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R8RKYMTR71');</script></head><body><header><div><a href="/">uki00a.github.io</a></div></header><h1 id="このブログについて">このブログについて</h1><h2 id="使っている技術">使っている技術</h2><p>このブログは<a href="https://github.com/xcatliu/pagic">pagic</a>を使って作成しています。</p><p>この記事を書いた時点でのバージョンは次の通りです。</p><ul><li><a href="mailto:deno@v1.3.1">deno@v1.3.1</a></li><li><a href="mailto:pagic@v0.8.6">pagic@v0.8.6</a></li></ul><h2 id="pagicとは">pagicとは?</h2><ul><li>Denoで実装されたスタティックサイトジェネレータ</li><li>記事をReactコンポーネントまたはmarkdown形式で記述できる</li><li>プラグインシステムにより拡張することが可能</li></ul><h2 id="pagicの使い方">pagicの使い方</h2><p>TBD</p><h2 id="デプロイ">デプロイ</h2><p>GitHub Actionsを使って、ビルド及びデプロイを自動化しています。</p><p><code>.github/workflows</code>ディレクトリ内に以下のようなyamlファイルを用意します。</p><pre class=""><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> build
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> master
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@master
+    <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> denolib/setup<span class="token punctuation">-</span>deno@master
+      <span class="token key atrule">with</span><span class="token punctuation">:</span>
+        <span class="token key atrule">deno-version</span><span class="token punctuation">:</span> 1.3.1
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build
+      <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+        deno run --unstable --allow-read --allow-write --allow-net https://deno.land/x/pagic@v0.8.6/mod.ts build</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
+      <span class="token key atrule">with</span><span class="token punctuation">:</span>
+        <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> ./dist
+</code></pre><p>これにより、masterブランチへのpush時に、以下の処理が実行されます。</p><ol><li><code>pagic build</code>による静的サイトの生成</li><li><a href="https://github.com/peaceiris/actions-gh-pages">peaceiris/actions-gh-pages</a>によるGitHub Pagesへのデプロイ</li></ol><h2 id="このサイトのソース">このサイトのソース</h2><p><a href="https://github.com/uki00a/blog">https://github.com/uki00a/blog</a>に置いています</p></body></html>
