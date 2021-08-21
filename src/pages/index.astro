@@ -11,10 +11,12 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishD
     <article>
       <section>
         <h2>Posts</h2>
+        <h2>{Astro.site}</h2>
       </section>
       <section>
         <ul>
-        {allPosts.map(p => <li><a href={Astro.resolve(p.url)}>{p.title}</a></li>)}
+        <!-- TODO: Is there a better way to generate absolute URLs? -->
+        {allPosts.map(p => <li><a href={"." + p.url}>{p.title}</a></li>)}
         </ul>
       </section>
     </article>
