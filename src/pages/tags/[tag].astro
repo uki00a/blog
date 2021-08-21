@@ -1,0 +1,33 @@
+---
+import ArticleListLayout from '../../layouts/ArticleList.astro';
+
+export function getStaticPaths() {
+  const allArticles = Astro.fetchContent('../articles/*.md');
+  const articlesByTag = allArticles.reduce((articlesByTag, article) => {
+    for (const tag of article.tags) {
+      if (!articlesByTag[tag]) {
+        articlesByTag[tag] = [];
+      }
+      articlesByTag[tag].push(article);
+    }
+    return articlesByTag;
+  }, {});
+  const paths = Object.entries(articlesByTag).map(([tag, articles]) => {
+    const params = { tag };
+    const props = { articles };
+    return { params, props };
+  });
+
+  return paths;
+}
+
+const { tag } = Astro.request.params;
+const { articles } = Astro.props;
+console.log(articles.map(x => x.title));
+---
+
+<ArticleListLayout
+  title={tag + 'の一覧'}
+  description={tag + 'の一覧'}
+  articles={articles}
+/>
