@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import ArticleList from '../components/ArticleList.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  articles: object[];
+}
+
+const { title, description, articles } = Astro.props;
+---
+<BaseLayout
+  title={title}
+  description={description}>
+  <div>
+    <article>
+      <section>
+        <h2>Posts</h2>
+      </section>
+      <section>
+        <ArticleList articles={articles} />
+      </section>
+    </article>
+  </div>
+</BaseLayout>

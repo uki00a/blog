@@ -1,23 +1,11 @@
 ---
-import BaseLayout from '../layouts/Base.astro';
+import ArticleListLayout from '../layouts/ArticleList.astro';
 
-let allPosts = Astro.fetchContent('./articles/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+let allArticles = Astro.fetchContent('./articles/*.md');
+allArticles = allArticles.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
 ---
-<BaseLayout
-  title="uki00a.github.io"
-  description="uki00a.github.io">
-  <div>
-    <article>
-      <section>
-        <h2>Posts</h2>
-      </section>
-      <section>
-        <ul>
-        <!-- TODO: Is there a better way to generate absolute URLs? -->
-        {allPosts.map(p => <li><a href={"." + p.url}>{p.title}</a></li>)}
-        </ul>
-      </section>
-    </article>
-  </div>
-</BaseLayout>
+<ArticleListLayout
+  title="TOP"
+  description="uki00a.github.io"
+  articles={allArticles}
+/>
