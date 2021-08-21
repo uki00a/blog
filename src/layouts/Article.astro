@@ -1,10 +1,14 @@
 ---
 import BaseLayout from './Base.astro';
+// TODO: Stop using github-markdown-css
+import 'github-markdown-css/github-markdown.css';
 
 const {content} = Astro.props;
 const {title, description, publishDate} = content;
 ---
 
 <BaseLayout title={title} description={description}>
-  <slot />
+  <div class="markdown-body">
+    <slot />
+  </div>
 </BaseLayout>

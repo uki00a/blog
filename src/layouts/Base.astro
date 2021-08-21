@@ -12,12 +12,20 @@ const maybeTrackingID = process.env.TRACKING_ID;
       trackingID={maybeTrackingID}
     />
   </head>
-  <body>
-    <header>
+  <body class="h-screen bg-gray-100">
+    <header class="bg-yellow-300 bg-gradient-r p-3">
       <div>
-        <a href={Astro.site}>uki00a.github.io</a>
+        <a
+          class="text-xl text-white font-semibold p-3"
+          href={Astro.site}>
+          uki00a.github.io
+        </a>
       </div>
     </header>
-    <slot />
+    <main class="container mx-auto">
+      <article class="p-4 bg-gray-100">
+        <slot />
+      </article>
+    </main>
   </body>
 </html>

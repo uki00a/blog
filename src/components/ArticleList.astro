@@ -9,7 +9,17 @@ function normalizeURL(url) {
 
 const { articles } = Astro.props;
 ---
-<ul>
+<ul class="list-disc list-inside">
 <!-- TODO: Is there a better way to generate absolute URLs? -->
-{articles.map(a => <li><a href={normalizeURL(a.url)}>{a.title}</a></li>)}
+{
+  articles.map(a => (
+    <li>
+      <a
+        href={normalizeURL(a.url)}
+        class="text-blue-500">
+        {a.title}
+      </a>
+    </li>
+  ))
+}
 </ul>

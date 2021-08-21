@@ -14,13 +14,11 @@ const { title, description, articles } = Astro.props;
   title={title}
   description={description}>
   <div>
-    <article>
-      <section>
-        <h2>Posts</h2>
-      </section>
-      <section>
-        <ArticleList articles={articles} />
-      </section>
-    </article>
+    <section>
+      <h2 class="text-lg font-semibold">記事</h2>
+    </section>
+    <section>
+      <ArticleList articles={articles} />
+    </section>
   </div>
 </BaseLayout>
