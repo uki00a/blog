@@ -14,7 +14,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishD
       </section>
       <section>
         <ul>
-        {allPosts.map(p => <li><a href={p.url}>{p.title}</a></li>)}
+        {allPosts.map(p => <li><a href={Astro.resolve(p.url)}>{p.title}</a></li>)}
         </ul>
       </section>
     </article>
