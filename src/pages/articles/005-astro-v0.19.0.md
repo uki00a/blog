@@ -144,13 +144,13 @@ Astroコンポーネント中で相対パスを解決するために使うAPIで
 この場合、以下のように記述してもうまく読み込むことはできません。
 
 ```jsx
-<img src="../assets/avatar.png" />
+<img src="../assets/logo.png" />
 ```
 
 `Astro.resolve()`を使用することでこの問題を解決できます。
 
 ```jsx
-<img src={Astro.resolve("../assets/avatar.png")} />
+<img src={Astro.resolve("../assets/logo.png")} />
 ```
 
 ## 参考
