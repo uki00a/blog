@@ -37,7 +37,7 @@ running <span class="token number">1</span> benchmark <span class="token punctua
 benchmark <span class="token function">sum</span> <span class="token punctuation">..</span>.
   <span class="token number">10000</span> runs avg: <span class="token number">0</span>.00033167510032653806ms
 benchmark result: DONE. <span class="token number">1</span> measured<span class="token punctuation">;</span> <span class="token number">0</span> filtered
-</code></pre><p>うまくいきました！</p><h2 id="補足-どうしてnodejsからdeno_stdを使っているの？">(補足) どうしてNode.jsからdeno_stdを使っているの？</h2><p><a href="https://github.com/denodrivers/redis">deno-redis</a>というDenoで実装されたRedisクライアントがあります。</p><p>現在、<code>deno-redis</code>のメンテナンスをしているのですが、個人的な目標としてNode.jsの<a href="https://github.com/luin/ioredis">ioredis</a>と同等レベルのパフォーマンスを出したいというのがあります。</p><p>その関係もあって、CIでdeno-redisとioredisで同様のコードを実行し、それぞれのパフォーマンスを計測するということを行っています。</p><h2 id="おわりに">おわりに</h2><p>この記事では、Node.jsから<a href="https://github.com/denoland/deno_std/tree/main/testing">testing/benchモジュール</a>を使用する方法について解説しました。</p><p>Denoに向けて書かれた他のモジュールについても、この記事で解説したものと同様の方法によってNode.jsからも使用できる可能性がありますので、参考になれば幸いです。</p></div></article></main><script>
+</code></pre><p>うまくいきました！</p><h2 id="おわりに">おわりに</h2><p>この記事では、Node.jsから<a href="https://github.com/denoland/deno_std/tree/main/testing">testing/benchモジュール</a>を使用する方法について解説しました。</p><p>Denoに向けて書かれた他のモジュールについても、この記事で解説したものと同様の方法によってNode.jsからも使用できる可能性がありますので、参考になれば幸いです。</p></div></article></main><script>
     document.querySelectorAll('link[href^="/_astro"]').forEach(function(el) {
       // TODO: Unable to fetch CSS files on github pages
       const url = new URL(el.href);
