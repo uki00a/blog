@@ -84,14 +84,6 @@ benchmark result: DONE. 1 measured; 0 filtered
 
 うまくいきました！
 
-## (補足) どうしてNode.jsからdeno_stdを使っているの？
-
-[deno-redis](https://github.com/denodrivers/redis)というDenoで実装されたRedisクライアントがあります。
-
-現在、`deno-redis`のメンテナンスをしているのですが、個人的な目標としてNode.jsの[ioredis](https://github.com/luin/ioredis)と同等レベルのパフォーマンスを出したいというのがあります。
-
-その関係もあって、CIでdeno-redisとioredisで同様のコードを実行し、それぞれのパフォーマンスを計測するということを行っています。
-
 ## おわりに
 
 この記事では、Node.jsから[testing/benchモジュール](https://github.com/denoland/deno_std/tree/main/testing)を使用する方法について解説しました。
