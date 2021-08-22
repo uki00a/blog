@@ -7,8 +7,6 @@ tags:
 layout: ../../layouts/Article.astro
 ---
 
-# 週刊DenoのサイトをPagicに移行した話
-
 ## はじめに
 
 個人で[週刊Deno](https://uki00a.github.io/deno-weekly/)というサイトを運営しています。

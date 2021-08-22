@@ -7,8 +7,6 @@ tags:
 layout: ../../layouts/Article.astro
 ---
 
-# rhysd/dotfilesを使ってdotfilesリポジトリの管理を楽にする
-
 ## はじめに
 
 [dotfilesリポジトリ](https://github.com/uki00a/dotfiles)の管理をシェルスクリプトから[rhysd/dotfiles](https://github.com/rhysd/dotfiles)に移行しました。

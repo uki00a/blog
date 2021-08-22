@@ -9,8 +9,6 @@ tags:
 layout: ../../layouts/Article.astro
 ---
 
-# deno_std/testing/benchをNode.jsから使用する
-
 ## はじめに
 
 この記事では、Node.jsからdeno_stdの[testing/benchモジュール](https://github.com/denoland/deno_std/tree/main/testing)を使用する方法について解説します。

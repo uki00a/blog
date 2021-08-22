@@ -8,8 +8,6 @@ tags:
 layout: ../../layouts/Article.astro
 ---
 
-# このブログについて 
-
 ## 使っている技術
 
 このブログは[pagic](https://github.com/xcatliu/pagic)を使って作成しています。

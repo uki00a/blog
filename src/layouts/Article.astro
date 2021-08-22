@@ -8,7 +8,13 @@ const {title, description, publishDate} = content;
 ---
 
 <BaseLayout title={title} description={description}>
+  <style global>
+  .markdown-body ul {
+    @apply list-disc
+  }
+  </style>
   <div class="markdown-body">
+    <h1>{title}</h1>
     <slot />
   </div>
 </BaseLayout>
