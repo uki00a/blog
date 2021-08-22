@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>AstroでTailwind CSSを使う - uki00a.github.io</title><meta name="title" content="AstroでTailwind CSSを使う - uki00a.github.io"><meta name="description"><meta property="og:type" content="website"><meta property="og:title" content="AstroでTailwind CSSを使う - uki00a.github.io"><meta property="og:description"><meta property="og:image" content="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/avatar.png"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:title" content="AstroでTailwind CSSを使う - uki00a.github.io"><meta property="twitter:description"><meta property="twitter:image" content="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/avatar.png"><meta name="twitter:site" content="@uki00a"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&amp;family=IBM+Plex+Sans:wght@400;700&amp;display=swap"><link rel="stylesheet" href="/_astro/common-27DMOI.css" type="text/css"><link rel="icon" href="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-R8RKYMTR71"></script><script>window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R8RKYMTR71');</script></head><body class="h-screen bg-gray-100"><header class="bg-yellow-300 bg-gradient-r p-3"><div><a class="text-xl text-white font-semibold p-3" href="https://uki00a.github.io/blog/">
+          uki00a.github.io
+        </a></div></header><main class="container mx-auto"><article class="p-4 bg-gray-100"><style global="" type="text/css">
+  .markdown-body ul {
+    margin-bottom: 1rem;
+    list-style-position: inside;
+    list-style-type: disc;
+    padding-left: 1rem
+}
+  .markdown-body h1, h2, h3 {
+    margin-bottom: 1rem;
+    font-weight: 700
+}
+  .markdown-body h1, h2 {
+    border-bottom-width: 2px;
+    border-style: solid;
+    --tw-border-opacity: 1;
+    border-color: rgba(229, 231, 235, var(--tw-border-opacity))
+}
+  .markdown-body h1 {
+    padding-bottom: 0.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem
+}
+  .markdown-body h2 {
+    font-size: 1.5rem;
+    line-height: 2rem
+}
+  .markdown-body h3 {
+    font-size: 1.125rem;
+    line-height: 1.75rem
+}
+  .markdown-body p {
+    margin-bottom: 1rem
+}
+  .markdown-body a {
+    --tw-text-opacity: 1;
+    color: rgba(59, 130, 246, var(--tw-text-opacity))
+}
+  .markdown-body :not(pre) > code {
+    --tw-bg-opacity: 1;
+    background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+    padding: 0.25rem
+}
+  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">AstroでTailwind CSSを使う</h1><div><a href="https://uki00a.github.io/blog/tags/Astro" class="text-blue-500 pr-1">
+        #Astro</a><a href="https://uki00a.github.io/blog/tags/JavaScript" class="text-blue-500 pr-1">
+        #JavaScript</a><a href="https://uki00a.github.io/blog/tags/Node.js" class="text-blue-500 pr-1">
+        #Node.js</a><a href="https://uki00a.github.io/blog/tags/tailwindcss" class="text-blue-500 pr-1">
+        #tailwindcss</a></div><div class="mb-4 astro-WBggsFB8"></div><h2 id="はじめに">はじめに</h2><p>AstroからTailwind CSSを使う方法について調べてみたので、使用方法について記載します。</p><h2 id="環境">環境</h2><ul><li>Astro v0.19.1</li><li>Tailwind CSS v2.2.7</li></ul><h2 id="セットアップ">セットアップ</h2><p>まず、YarnやnpmでTailwind CSSをインストールします。</p><pre class=""><code class="language-shell">$ <span class="token function">yarn</span> <span class="token function">add</span> --dev tailwindcss
+</code></pre><p><code>tailwind.config.js</code>を用意します (Vue.jsやSvelteなどを使うときは、<code>purge</code>オプションを調整する必要があります)</p><pre class=""><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token operator">:</span> <span class="token string">'jit'</span><span class="token punctuation">,</span>
+  purge<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'./src/**/*.{astro,js,jsx}'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p><code>astro.config.mjs</code>の<code>devOptions.tailwindConfig</code>を編集します。</p><pre class=""><code class="language-javascript">  <span class="token operator">...</span>
+  devOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// port: 3000,         // The port to run the dev server on.</span>
+    tailwindConfig<span class="token operator">:</span> <span class="token string">'./tailwind.config.js'</span><span class="token punctuation">,</span> <span class="token comment">// Path to tailwind.config.js if used, e.g. './tailwind.config.js'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+</code></pre><p>これでTailwind CSSのクラスを使用できるようになります。</p><h2 id="注意点">注意点</h2><p><code>tailwind.config.js</code>を編集した場合は、Astroのサーバプロセスを再起動しないと、設定の変更が反映されないみたいです。</p><h2 id="markdownから生成されたhtmlにtailwind-cssのスタイルを適用する">Markdownから生成されたHTMLにTailwind CSSのスタイルを適用する</h2><p>AstroのMarkdownのレンダリング機能によって生成されたHTMLにTailwind CSSのスタイルを適用する際は、少し工夫が必要です。</p><p><a href="https://github.com/snowpackjs/astro/blob/astro%400.19.1/docs/src/pages/core-concepts/layouts.md">レイアウトコンポーネント</a>で<a href="https://github.com/snowpackjs/astro/blob/astro%400.19.1/docs/src/pages/guides/styling.md">グローバルスタイル</a>+<a href="https://tailwindcss.com/docs/extracting-components#extracting-component-classes-with-apply">@applyディレクティブ</a>を定義すると適用できます。</p><p>例)</p><pre class=""><code class="language-jsx"><span class="token operator">--</span><span class="token operator">-</span>
+<span class="token keyword">import</span> BaseLayout <span class="token keyword">from</span> <span class="token string">'./Base.astro'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span>content<span class="token punctuation">}</span> <span class="token operator">=</span> Astro<span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> title<span class="token punctuation">,</span> description <span class="token punctuation">}</span> <span class="token operator">=</span> content<span class="token punctuation">;</span>
+<span class="token operator">--</span><span class="token operator">-</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">BaseLayout</span></span> <span class="token attr-name">title</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>title<span class="token punctuation">}</span></span> <span class="token attr-name">description</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>description<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">global</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+  .markdown-body ul {
+    @apply list-disc list-inside pl-4 mb-4
+  }
+  .markdown-body h1, h2, h3 {
+    @apply font-bold mb-4
+  }
+  .markdown-body h1, h2 {
+    @apply border-b-2 border-solid border-gray-200 
+  }
+  .markdown-body h1 {
+    @apply text-3xl pb-2
+  }
+  .markdown-body h2 {
+    @apply text-2xl
+  }
+  .markdown-body h3 {
+    @apply text-lg
+  }
+  .markdown-body p {
+    @apply mb-4
+  }
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>markdown-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">BaseLayout</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre><h2 id="参考">参考</h2><ul><li><a href="https://github.com/snowpackjs/astro/blob/astro%400.19.1/docs/src/pages/guides/styling.md#-tailwind">https://github.com/snowpackjs/astro/blob/astro%400.19.1/docs/src/pages/guides/styling.md#-tailwind</a></li></ul></div></article></main><script>
+    document.querySelectorAll('link[href^="/_astro"]').forEach(function(el) {
+      // TODO: Unable to fetch CSS files on github pages
+      const url = new URL(el.href);
+      url.pathname = "/blog" + url.pathname;
+      el.href = url.href;
+    });
+    </script></body></html>
