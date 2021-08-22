@@ -3,7 +3,11 @@
             gtag('js', new Date());
             gtag('config', 'G-R8RKYMTR71');</script></head><body class="h-screen bg-gray-100"><header class="bg-yellow-300 bg-gradient-r p-3"><div><a class="text-xl text-white font-semibold p-3" href="https://uki00a.github.io/blog/">
           uki00a.github.io
-        </a></div></header><main class="container mx-auto"><article class="p-4 bg-gray-100"><div class="markdown-body"><h1 id="deno_stdtestingbenchをnodejsから使用する">deno_std/testing/benchをNode.jsから使用する</h1><h2 id="はじめに">はじめに</h2><p>この記事では、Node.jsからdeno_stdの<a href="https://github.com/denoland/deno_std/tree/main/testing">testing/benchモジュール</a>を使用する方法について解説します。</p><h2 id="確認環境">確認環境</h2><ul><li>Deno: v1.10.3</li><li>Node.js: v16.3.0</li></ul><h2 id="解説">解説</h2><p><code>benchmark.ts</code>というファイルがあったとします。</p><pre class=""><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>
+        </a></div></header><main class="container mx-auto"><article class="p-4 bg-gray-100"><style global="" type="text/css">
+  .markdown-body ul {
+    list-style-type: disc
+}
+  </style><div class="markdown-body astro-WBggsFB8"><h1 class="astro-WBggsFB8">deno_std/testing/benchをNode.jsから使用する</h1><h2 id="はじめに">はじめに</h2><p>この記事では、Node.jsからdeno_stdの<a href="https://github.com/denoland/deno_std/tree/main/testing">testing/benchモジュール</a>を使用する方法について解説します。</p><h2 id="確認環境">確認環境</h2><ul><li>Deno: v1.10.3</li><li>Node.js: v16.3.0</li></ul><h2 id="解説">解説</h2><p><code>benchmark.ts</code>というファイルがあったとします。</p><pre class=""><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>
   bench<span class="token punctuation">,</span>
   BenchmarkRunResult<span class="token punctuation">,</span>
   runBenchmarks<span class="token punctuation">,</span>
