@@ -20,5 +20,6 @@ const { title, description, articles } = Astro.props;
     <section>
       <ArticleList articles={articles} />
     </section>
+    <slot name="additional-sections" />
   </div>
 </BaseLayout>
