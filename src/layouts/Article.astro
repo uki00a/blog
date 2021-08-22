@@ -1,8 +1,9 @@
 ---
 import BaseLayout from './Base.astro';
+import TagList from '../components/TagList.astro';
 
 const {content} = Astro.props;
-const {title, description, publishDate} = content;
+const { title, description, publishDate, tags } = content;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -37,6 +38,8 @@ const {title, description, publishDate} = content;
   </style>
   <div class="markdown-body shadow-md p-8">
     <h1>{title}</h1>
+    <TagList tags={tags} />
+    <div class="mb-4" />
     <slot />
   </div>
 </BaseLayout>

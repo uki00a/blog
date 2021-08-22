@@ -1,5 +1,6 @@
 ---
 import ArticleListLayout from '../layouts/ArticleList.astro';
+import TagList from '../components/TagList.astro';
 
 const allArticles = Astro.fetchContent('./articles/*.md').sort((a, b) => {
   return new Date(b.date) - new Date(a.date);
@@ -18,16 +19,6 @@ const tags = Array.from(allArticles.reduce((tags, article) => {
 >
   <section slot="additional-sections" class="mt-4">
     <h2 class="text-lg font-semibold">タグ</h2>
-    <div>
-      {
-        tags.map((tag) => (
-          <a
-            href={`./tags/${tag}`}
-            class="text-blue-500 pr-1">
-            #{tag}
-          </a>
-        ))
-      }
-    </div>
+    <TagList tags={tags} />
   </section>
 </ArticleListLayout>

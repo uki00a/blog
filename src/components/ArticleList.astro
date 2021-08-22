@@ -1,10 +1,8 @@
 ---
+import { joinSiteAndPath } from '../util.js';
+
 export interface Props {
   articles: object[];
-}
-
-function normalizeURL(url) {
-  return `${Astro.site}${url.substring(1)}`;
 }
 
 const { articles } = Astro.props;
@@ -15,7 +13,7 @@ const { articles } = Astro.props;
   articles.map(a => (
     <li>
       <a
-        href={normalizeURL(a.url)}
+        href={joinSiteAndPath(Astro.site, a.url)}
         class="text-blue-500">
         {a.title}
       </a>
