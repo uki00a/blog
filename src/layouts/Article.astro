@@ -1,7 +1,5 @@
 ---
 import BaseLayout from './Base.astro';
-// TODO: Stop using github-markdown-css
-import 'github-markdown-css/github-markdown.css';
 
 const {content} = Astro.props;
 const {title, description, publishDate} = content;
@@ -10,7 +8,31 @@ const {title, description, publishDate} = content;
 <BaseLayout title={title} description={description}>
   <style global>
   .markdown-body ul {
-    @apply list-disc
+    @apply list-disc list-inside pl-4 mb-4
+  }
+  .markdown-body h1, h2, h3 {
+    @apply font-bold mb-4
+  }
+  .markdown-body h1, h2 {
+    @apply border-b-2 border-solid border-gray-200 
+  }
+  .markdown-body h1 {
+    @apply text-3xl pb-2
+  }
+  .markdown-body h2 {
+    @apply text-2xl
+  }
+  .markdown-body h3 {
+    @apply text-lg
+  }
+  .markdown-body p {
+    @apply mb-4
+  }
+  .markdown-body a {
+    @apply text-blue-500
+  }
+  .markdown-body :not(pre) > code {
+    @apply bg-gray-200 p-1
   }
   </style>
   <div class="markdown-body">
