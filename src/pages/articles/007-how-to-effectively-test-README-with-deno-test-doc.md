@@ -12,11 +12,11 @@ layout: ../../layouts/Article.astro
 
 この機能を利用することで、`README.md`などに記述したサンプルコードの型チェックをすることができます。
 
+そのため、Denoモジュールを[deno.land/x](https://deno.land/x)や[nest.land](https://nest.land/)などに公開する場合、サンプルコードが正しく動作することを保証するのにとても役立ちます。
+
 ## 問題
 
-この機能はDenoモジュールを[deno.land/x](https://deno.land/x)や[nest.land](https://nest.land/)などに公開する場合、サンプルコードが正しく動作することを保証するのにとても役立ちます。
-
-しかし、`README.md`などにサンプルコードを記述する際は、以下のように`import`節には[deno.land/x](https://deno.land/x)の公開URLを記述することが一般的だと思います。
+`README.md`などにサンプルコードを記述する際は、以下のように`import`節には[deno.land/x](https://deno.land/x)の公開URLを記述することが一般的だと思います。
 
 例)
 
@@ -34,7 +34,7 @@ layout: ../../layouts/Article.astro
   ```
 ~~~~~~
 
-この場合、モジュールは`https://deno.land/x/redis/mod.ts`から読み込まれてしまうため、CIなどで最新状態のソースに対してテストができない問題があります。
+この場合、モジュールは`https://deno.land/x/redis/mod.ts`から読み込まれてしまうため、**CIなどで最新状態のソースに対してテストができない**問題があります。
 
 ## 解決策
 
