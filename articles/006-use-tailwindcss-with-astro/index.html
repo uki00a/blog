@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>AstroでTailwind CSSを使う - uki00a.github.io</title><meta name="title" content="AstroでTailwind CSSを使う - uki00a.github.io"><meta name="description"><meta property="og:type" content="website"><meta property="og:title" content="AstroでTailwind CSSを使う - uki00a.github.io"><meta property="og:description"><meta property="og:image" content="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/avatar.png"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:title" content="AstroでTailwind CSSを使う - uki00a.github.io"><meta property="twitter:description"><meta property="twitter:image" content="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/avatar.png"><meta name="twitter:site" content="@uki00a"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&amp;family=IBM+Plex+Sans:wght@400;700&amp;display=swap"><link rel="stylesheet" href="/_astro/common-16LM0s.css" type="text/css"><link rel="icon" href="https://raw.githubusercontent.com/uki00a/blog/master/src/assets/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-R8RKYMTR71"></script><script>window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-R8RKYMTR71');</script></head><body class="bg-gray-100 overoll-y-scroll"><header class="bg-yellow-300 bg-gradient-r p-3 flex justify-between"><a class="text-xl text-white font-bold" href="https://uki00a.github.io/">
+            gtag('config', 'G-R8RKYMTR71');</script></head><body class="bg-gray-100 overoll-y-scroll"><header class="bg-yellow-300 bg-gradient-r p-3 flex justify-between"><a class="text-xl text-white font-bold" href="https://uki00a.github.io/blog">
         uki00a.github.io
       </a><div class="hidden md:block"><a class="text-white text-lg mr-3 font-semibold" target="_blank" href="https://github.com/uki00a/blog">
           GitHub
@@ -49,10 +49,10 @@
     background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
     padding: 0.25rem
 }
-  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">AstroでTailwind CSSを使う</h1><div><a href="https://uki00a.github.io/tags/Astro" class="text-blue-500 pr-1">
-        #Astro</a><a href="https://uki00a.github.io/tags/JavaScript" class="text-blue-500 pr-1">
-        #JavaScript</a><a href="https://uki00a.github.io/tags/Node.js" class="text-blue-500 pr-1">
-        #Node.js</a><a href="https://uki00a.github.io/tags/tailwindcss" class="text-blue-500 pr-1">
+  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">AstroでTailwind CSSを使う</h1><div><a href="https://uki00a.github.io/blogtags/Astro" class="text-blue-500 pr-1">
+        #Astro</a><a href="https://uki00a.github.io/blogtags/JavaScript" class="text-blue-500 pr-1">
+        #JavaScript</a><a href="https://uki00a.github.io/blogtags/Node.js" class="text-blue-500 pr-1">
+        #Node.js</a><a href="https://uki00a.github.io/blogtags/tailwindcss" class="text-blue-500 pr-1">
         #tailwindcss</a></div><div class="mb-4 astro-WBggsFB8"></div><h2 id="はじめに">はじめに</h2><p>AstroからTailwind CSSを使う方法について調べてみたので、使用方法について記載します。</p><h2 id="環境">環境</h2><ul><li>Astro v0.19.1</li><li>Tailwind CSS v2.2.7</li></ul><h2 id="セットアップ">セットアップ</h2><p>まず、YarnやnpmでTailwind CSSをインストールします。</p><pre class=" language-shell"><code class="language-shell">$ <span class="token function">yarn</span> <span class="token function">add</span> --dev tailwindcss
 </code></pre><p><code>tailwind.config.js</code>を用意します (Vue.jsやSvelteなどを使うときは、<code>purge</code>オプションを調整する必要があります)</p><pre class=" language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   mode<span class="token operator">:</span> <span class="token string">'jit'</span><span class="token punctuation">,</span>
