@@ -49,7 +49,7 @@
     background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
     padding: 0.25rem
 }
-  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">deno test --docでREADME.mdをうまくテストする</h1><div><a href="https://uki00a.github.io/blogtags/deno" class="text-blue-500 pr-1">
+  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">deno test --docでREADME.mdをうまくテストする</h1><div><a href="https://uki00a.github.io/blog/tags/deno" class="text-blue-500 pr-1">
         #deno</a></div><div class="mb-4 astro-WBggsFB8"></div><h2 id="はじめに">はじめに</h2><p><a href="https://deno.com/blog/v1.13">Deno v1.13</a>から<code>deno test --doc</code>コマンドでMarkdownファイルがサポートされました。</p><p>この機能を利用することで、<code>README.md</code>などに記述したサンプルコードの型チェックをすることができます。</p><p>そのため、Denoモジュールを<a href="https://deno.land/x">deno.land/x</a>や<a href="https://nest.land/">nest.land</a>などに公開する場合、サンプルコードが正しく動作することを保証するのにとても役立ちます。</p><h2 id="問題">問題</h2><p><code>README.md</code>などにサンプルコードを記述する際は、以下のように<code>import</code>節には<a href="https://deno.land/x">deno.land/x</a>の公開URLを記述することが一般的だと思います。</p><p>例)</p><pre class=" language-markdown"><code class="language-markdown">  <span class="token title important"><span class="token punctuation">##</span> Usage</span>
 
   ```ts

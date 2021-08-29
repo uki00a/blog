@@ -49,10 +49,10 @@
     background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
     padding: 0.25rem
 }
-  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">AstroでTailwind CSSを使う</h1><div><a href="https://uki00a.github.io/blogtags/Astro" class="text-blue-500 pr-1">
-        #Astro</a><a href="https://uki00a.github.io/blogtags/JavaScript" class="text-blue-500 pr-1">
-        #JavaScript</a><a href="https://uki00a.github.io/blogtags/Node.js" class="text-blue-500 pr-1">
-        #Node.js</a><a href="https://uki00a.github.io/blogtags/tailwindcss" class="text-blue-500 pr-1">
+  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">AstroでTailwind CSSを使う</h1><div><a href="https://uki00a.github.io/blog/tags/Astro" class="text-blue-500 pr-1">
+        #Astro</a><a href="https://uki00a.github.io/blog/tags/JavaScript" class="text-blue-500 pr-1">
+        #JavaScript</a><a href="https://uki00a.github.io/blog/tags/Node.js" class="text-blue-500 pr-1">
+        #Node.js</a><a href="https://uki00a.github.io/blog/tags/tailwindcss" class="text-blue-500 pr-1">
         #tailwindcss</a></div><div class="mb-4 astro-WBggsFB8"></div><h2 id="はじめに">はじめに</h2><p>AstroからTailwind CSSを使う方法について調べてみたので、使用方法について記載します。</p><h2 id="環境">環境</h2><ul><li>Astro v0.19.1</li><li>Tailwind CSS v2.2.7</li></ul><h2 id="セットアップ">セットアップ</h2><p>まず、YarnやnpmでTailwind CSSをインストールします。</p><pre class=" language-shell"><code class="language-shell">$ <span class="token function">yarn</span> <span class="token function">add</span> --dev tailwindcss
 </code></pre><p><code>tailwind.config.js</code>を用意します (Vue.jsやSvelteなどを使うときは、<code>purge</code>オプションを調整する必要があります)</p><pre class=" language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   mode<span class="token operator">:</span> <span class="token string">'jit'</span><span class="token punctuation">,</span>

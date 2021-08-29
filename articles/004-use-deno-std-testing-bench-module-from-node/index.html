@@ -49,10 +49,10 @@
     background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
     padding: 0.25rem
 }
-  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">deno_std/testing/benchをNode.jsから使用する</h1><div><a href="https://uki00a.github.io/blogtags/deno" class="text-blue-500 pr-1">
-        #deno</a><a href="https://uki00a.github.io/blogtags/Node.js" class="text-blue-500 pr-1">
-        #Node.js</a><a href="https://uki00a.github.io/blogtags/TypeScript" class="text-blue-500 pr-1">
-        #TypeScript</a><a href="https://uki00a.github.io/blogtags/JavaScript" class="text-blue-500 pr-1">
+  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">deno_std/testing/benchをNode.jsから使用する</h1><div><a href="https://uki00a.github.io/blog/tags/deno" class="text-blue-500 pr-1">
+        #deno</a><a href="https://uki00a.github.io/blog/tags/Node.js" class="text-blue-500 pr-1">
+        #Node.js</a><a href="https://uki00a.github.io/blog/tags/TypeScript" class="text-blue-500 pr-1">
+        #TypeScript</a><a href="https://uki00a.github.io/blog/tags/JavaScript" class="text-blue-500 pr-1">
         #JavaScript</a></div><div class="mb-4 astro-WBggsFB8"></div><h2 id="はじめに">はじめに</h2><p>この記事では、Node.jsからdeno_stdの<a href="https://github.com/denoland/deno_std/tree/main/testing">testing/benchモジュール</a>を使用する方法について解説します。</p><h2 id="確認環境">確認環境</h2><ul><li>Deno: v1.10.3</li><li>Node.js: v16.3.0</li></ul><h2 id="解説">解説</h2><p><code>benchmark.ts</code>というファイルがあったとします。</p><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>
   bench<span class="token punctuation">,</span>
   BenchmarkRunResult<span class="token punctuation">,</span>

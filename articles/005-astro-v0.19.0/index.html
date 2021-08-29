@@ -49,10 +49,10 @@
     background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
     padding: 0.25rem
 }
-  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">Astro v0.19.0の新機能について</h1><div><a href="https://uki00a.github.io/blogtags/Astro" class="text-blue-500 pr-1">
-        #Astro</a><a href="https://uki00a.github.io/blogtags/JavaScript" class="text-blue-500 pr-1">
-        #JavaScript</a><a href="https://uki00a.github.io/blogtags/Node.js" class="text-blue-500 pr-1">
-        #Node.js</a><a href="https://uki00a.github.io/blogtags/Jamstack" class="text-blue-500 pr-1">
+  </style><div class="markdown-body shadow-md p-8 astro-WBggsFB8"><h1 class="astro-WBggsFB8">Astro v0.19.0の新機能について</h1><div><a href="https://uki00a.github.io/blog/tags/Astro" class="text-blue-500 pr-1">
+        #Astro</a><a href="https://uki00a.github.io/blog/tags/JavaScript" class="text-blue-500 pr-1">
+        #JavaScript</a><a href="https://uki00a.github.io/blog/tags/Node.js" class="text-blue-500 pr-1">
+        #Node.js</a><a href="https://uki00a.github.io/blog/tags/Jamstack" class="text-blue-500 pr-1">
         #Jamstack</a></div><div class="mb-4 astro-WBggsFB8"></div><p><a href="https://astro.build/">Astro</a>のv0.19.0がリリースされました。</p><p>この記事では、v0.19.0で追加された新機能について紹介します。</p><h2 id="astroとは">Astroとは?</h2><p>Node.jsで実装されたスタティックサイトジェネレータです。</p><p>以下のような特徴があります。</p><ul><li><a href="https://www.snowpack.dev/">Snowpack</a>をベースとしており、高い生産性が期待できる</li><li><a href="https://docs.astro.build/core-concepts/component-hydration">Partial Hydration</a>という独自の仕組みを提供している</li><li><a href="https://docs.astro.build/core-concepts/astro-components">Astroコンポーネント</a>というJSXライクな独自形式でページなどを記述できる</li><li>Markdownサポート</li><li>React/Preact/Vue.js/Svelteなどのフレームワークもサポート</li></ul><h2 id="ダイナミックルーティング">ダイナミックルーティング</h2><p>動的にページを生成するためにダイナミックルーティングの仕組みが実装されました。</p><p>ページネーションやタグ機能を実装したり、ContentfulやmicroCMSなどのHeadless CMSと連携して記事の一覧を生成したい場合などに使用することができます。</p><h3 id="例-タグ機能の実装">例) タグ機能の実装</h3><p>ダイナミックルーティングを使用したタグ機能の実装例を紹介します。</p><p>まず、各記事で<a href="https://middlemanapp.com/jp/basics/frontmatter/">Frontmatter</a>を使用して<code>tags</code>を定義します。</p><pre class=" language-markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
 <span class="token font-matter yaml language-yaml"><span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-08-22</span>
 <span class="token key atrule">title</span><span class="token punctuation">:</span> Denoの使い方
