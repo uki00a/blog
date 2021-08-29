@@ -39,13 +39,17 @@ const maybeTrackingID = process.env.TRACKING_ID;
         <slot />
       </article>
     </main>
+    <!--
     <script>
     document.querySelectorAll('link[href^="/_astro"]').forEach(function(el) {
       // TODO: Unable to fetch CSS files on github pages
+      const link = document.createElement("link");
       const url = new URL(el.href);
       url.pathname = "/blog" + url.pathname;
-      el.href = url.href;
+      link.href = url.href;
+      document.body.appendChild(link);
     });
     </script>
+    -->
   </body>
 </html>

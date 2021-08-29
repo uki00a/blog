@@ -35,15 +35,9 @@ const { title, description, trackingID } = Astro.props;
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap">
 
 <!-- Additional tags -->
-<!--
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css"
-/>
--->
-<link
-  rel="stylesheet"
-  href="/global.css"
+  href={Astro.resolve("../global.css")}
 />
 <link
   rel="icon"
