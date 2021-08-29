@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.2.1",
-    "astro": "^0.19.1",
+    "astro": "^0.20.3",
     "tailwindcss": "^2.2.7"
   }
 }
