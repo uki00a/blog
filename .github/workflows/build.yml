@@ -18,7 +18,7 @@ jobs:
     - uses: bahmutov/npm-install@v1
     - name: Build
       env:
-        ASTRO_SITE: https://uki00a.github.io/
+        ASTRO_SITE: https://uki00a.github.io/blog
         TRACKING_ID: G-R8RKYMTR71
       run: |
         yarn build
