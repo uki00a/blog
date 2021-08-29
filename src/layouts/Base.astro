@@ -46,6 +46,7 @@ const maybeTrackingID = process.env.TRACKING_ID;
       const url = new URL(el.href);
       url.pathname = "/blog" + url.pathname;
       link.href = url.href;
+      link.rel = "stylesheet";
       document.body.appendChild(link);
     });
     </script>
