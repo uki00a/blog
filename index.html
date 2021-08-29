@@ -18,4 +18,13 @@
         #pagic</a><a href="https://uki00a.github.io/tags/vim" class="text-blue-500 pr-1">
         #vim</a><a href="https://uki00a.github.io/tags/vscode" class="text-blue-500 pr-1">
         #vscode</a><a href="https://uki00a.github.io/tags/GitHubActions" class="text-blue-500 pr-1">
-        #GitHubActions</a></div></section></div></article></main></body></html>
+        #GitHubActions</a></div></section></div></article></main><script>
+    document.querySelectorAll('link[href^="/_astro"]').forEach(function(el) {
+      // TODO: Unable to fetch CSS files on github pages
+      const link = document.createElement("link");
+      const url = new URL(el.href);
+      url.pathname = "/blog" + url.pathname;
+      link.href = url.href;
+      document.body.appendChild(link);
+    });
+    </script></body></html>

@@ -76,4 +76,13 @@ Exist: <span class="token string">'/home/uki00a/ghq/github.com/uki00a/dotfiles/.
 </code></pre><p>デフォルトでは、<code>rhysd/dotfiles</code>はvscodeやNeovimの設定ファイルを認識しないため、それらに関するマッピング情報を定義しています。</p><p>この状態で<code>dotfiles link</code>を実行すると、vscodeやNeovimの設定ファイルに対するシンボリックリンクが作成されるようになります。</p><h2 id="シンボリックリンクの削除">シンボリックリンクの削除</h2><p>以下のコマンドを実行すると、<code>rhysd/dotfiles</code>によって作成されたシンボリックリンクが削除されます。</p><pre class=" language-shell"><code class="language-shell">$ dotfiles clean
 </code></pre><h2 id="おわりに">おわりに</h2><p>この記事では<code>rhysd/dotfiles</code>の使い方について解説しました。
 このツールを使うことでシンボリックリンク等の作成が自動化されるため、とても便利だと思いました。
-興味があれば、ぜひ使ってみてください。</p></div></article></main></body></html>
+興味があれば、ぜひ使ってみてください。</p></div></article></main><script>
+    document.querySelectorAll('link[href^="/_astro"]').forEach(function(el) {
+      // TODO: Unable to fetch CSS files on github pages
+      const link = document.createElement("link");
+      const url = new URL(el.href);
+      url.pathname = "/blog" + url.pathname;
+      link.href = url.href;
+      document.body.appendChild(link);
+    });
+    </script></body></html>

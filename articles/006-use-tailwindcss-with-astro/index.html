@@ -99,4 +99,13 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">BaseLayout</span></span><span class="token punctuation">&gt;</span></span>
-</code></pre><h2 id="参考">参考</h2><ul><li><a href="https://github.com/snowpackjs/astro/blob/astro%400.19.1/docs/src/pages/guides/styling.md#-tailwind">https://github.com/snowpackjs/astro/blob/astro%400.19.1/docs/src/pages/guides/styling.md#-tailwind</a></li></ul></div></article></main></body></html>
+</code></pre><h2 id="参考">参考</h2><ul><li><a href="https://github.com/snowpackjs/astro/blob/astro%400.19.1/docs/src/pages/guides/styling.md#-tailwind">https://github.com/snowpackjs/astro/blob/astro%400.19.1/docs/src/pages/guides/styling.md#-tailwind</a></li></ul></div></article></main><script>
+    document.querySelectorAll('link[href^="/_astro"]').forEach(function(el) {
+      // TODO: Unable to fetch CSS files on github pages
+      const link = document.createElement("link");
+      const url = new URL(el.href);
+      url.pathname = "/blog" + url.pathname;
+      link.href = url.href;
+      document.body.appendChild(link);
+    });
+    </script></body></html>

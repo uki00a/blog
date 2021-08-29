@@ -121,4 +121,13 @@
 <span class="token punctuation">}</span>
 </code></pre><p>この場合、最終的に以下のようなページが生成されます。</p><ul><li><code>/tags/deno</code></li><li><code>/tags/TypeScript</code></li></ul><h2 id="clientonlyディレクティブ">client:onlyディレクティブ</h2><p><code>client:only</code>ディレクティブが追加されました。</p><p>これが付与されたコンポーネントはビルド時にレンダリングされず、ブラウザ上でhydrateされるようになります。</p><p><code>Window</code>などのブラウザ上で提供されるAPIに依存したコンポーネントに付与することを意図しているようです。</p><h2 id="astroresolve">Astro.resolve()</h2><p>Astroコンポーネント中で相対パスを解決するために使うAPIです。</p><p>例えば、<code>src/pages/index.astro</code>から<code>src/assets/logo.png</code>を読み込みたいとします。</p><p>この場合、以下のように記述してもうまく読み込むことはできません。</p><pre class=" language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../assets/logo.png<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
 </code></pre><p><code>Astro.resolve()</code>を使用することでこの問題を解決できます。</p><pre class=" language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>Astro<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"../assets/logo.png"</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
-</code></pre><h2 id="参考">参考</h2><ul><li><a href="https://astro.build/blog/astro-019">https://astro.build/blog/astro-019</a></li></ul></div></article></main></body></html>
+</code></pre><h2 id="参考">参考</h2><ul><li><a href="https://astro.build/blog/astro-019">https://astro.build/blog/astro-019</a></li></ul></div></article></main><script>
+    document.querySelectorAll('link[href^="/_astro"]').forEach(function(el) {
+      // TODO: Unable to fetch CSS files on github pages
+      const link = document.createElement("link");
+      const url = new URL(el.href);
+      url.pathname = "/blog" + url.pathname;
+      link.href = url.href;
+      document.body.appendChild(link);
+    });
+    </script></body></html>

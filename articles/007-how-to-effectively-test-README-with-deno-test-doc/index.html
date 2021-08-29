@@ -67,4 +67,13 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre><p>そして、<code>deno test --doc</code>コマンドを実行する際に<code>--import-map</code>オプションでこのファイルを指定します。</p><pre class=" language-shell"><code class="language-shell">$ deno <span class="token builtin class-name">test</span> --doc --no-run --import-map<span class="token operator">=</span>import_map.test.json README.md
-</code></pre><p>こうすることで、<code>https://deno.land/x/redis/mod.ts</code>が<code>./mod.ts</code>の読み込みに置き換えられるため、ローカルの最新状態の<code>mod.ts</code>に対してテストすることができます。</p><h2 id="参考">参考</h2><ul><li><a href="https://deno.com/blog/v1.13">Deno 1.13 Release Notes</a></li></ul><h3 id="環境">環境</h3><ul><li>Deno v1.13.1</li></ul></div></article></main></body></html>
+</code></pre><p>こうすることで、<code>https://deno.land/x/redis/mod.ts</code>が<code>./mod.ts</code>の読み込みに置き換えられるため、ローカルの最新状態の<code>mod.ts</code>に対してテストすることができます。</p><h2 id="参考">参考</h2><ul><li><a href="https://deno.com/blog/v1.13">Deno 1.13 Release Notes</a></li></ul><h3 id="環境">環境</h3><ul><li>Deno v1.13.1</li></ul></div></article></main><script>
+    document.querySelectorAll('link[href^="/_astro"]').forEach(function(el) {
+      // TODO: Unable to fetch CSS files on github pages
+      const link = document.createElement("link");
+      const url = new URL(el.href);
+      url.pathname = "/blog" + url.pathname;
+      link.href = url.href;
+      document.body.appendChild(link);
+    });
+    </script></body></html>
