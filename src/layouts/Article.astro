@@ -3,10 +3,10 @@ import BaseLayout from './Base.astro';
 import TagList from '../components/TagList.astro';
 
 const {content} = Astro.props;
-const { title, description, publishDate, tags } = content;
+const { title, description, date, tags } = content;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} date={date}>
   <style global>
   .markdown-body ul {
     @apply list-disc list-inside pl-4 mb-4

@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 
-const {title, description} = Astro.props;
+const {title, description, date} = Astro.props;
 const maybeTrackingID = process.env.TRACKING_ID;
 ---
 <html lang="ja">
@@ -10,6 +10,7 @@ const maybeTrackingID = process.env.TRACKING_ID;
       title={title + " - uki00a.github.io"}
       description={description}
       trackingID={maybeTrackingID}
+      date={date}
     />
   </head>
   <body class="bg-gray-100 overoll-y-scroll">
